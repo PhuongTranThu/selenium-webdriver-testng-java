@@ -26,17 +26,26 @@ public class Topic_00_Teamplate {
 	@Test
 	public void TC_01() {
 		driver.get("https://www.facebook.com/");	
+		sleepInSecond(2);
 	}
 
 	@Test
 	public void TC_02() {
-		
+		sleepInSecond(3);
 	}
 
 
 	@AfterClass
-	public void afterClass() {
+	public void afterClass() {		
 		driver.quit();
+		}
+	// Sleep cứng (Static wait)
+	public void sleepInSecond(long timeInSecond) {
+	try {
+		Thread.sleep(timeInSecond* 1000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
 	}
-
+	}
 }
