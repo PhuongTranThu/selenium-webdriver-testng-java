@@ -39,11 +39,19 @@ public class Topic_12_Custom_Checkbox_Radio {
 		
 		// Case 1:
 		// Thẻ input ko click được -> Failed
-		// Thẻ input dùng verify được -> Pass
+		// Nhưng thẻ input dùng verify được -> Pass
+		// driver.findElement(By.xpath("//span[text()='Checked']/preceding-sibling::span/input")).click();
 		
 		// Case 2:
 		// Không dùng thẻ input để click -  thẻ span chứa text -> Passed
 		// Không dùng thẻ input để verify -> Failed
+		/*
+		By checkedCheckbox = By.xpath("//span[text()='Checked']");
+		driver.findElement(checkedCheckbox).click();
+		sleepInSecond(3);
+		
+		Assert.assertTrue(driver.findElement(checkedCheckbox).isSelected());
+		*/
 		
 		// Case 3: Thỏa mãn hết điều kiện (Vừa click được/ vừa verify được)
 		// Không dùng thẻ input để click - thẻ span chưa text -> Passed
@@ -56,9 +64,9 @@ public class Topic_12_Custom_Checkbox_Radio {
 		// Thẻ input dùng verify được -> Passed
 		// JavascriptExecutor ko quan tâm element bị che hay ko (vẫn click được)
 		
-		By checkedCheckbox = By.xpath("//span[text()='Checked']/preceding-sibling::span/input");
-		jsExecutor.executeScript("arguments[0].click();", driver.findElement(checkedCheckbox));
-		Assert.assertTrue(driver.findElement(checkedCheckbox).isSelected());
+		By checkedCheckbox1 = By.xpath("//span[text()='Checked']/preceding-sibling::span/input");
+		jsExecutor.executeScript("arguments[0].click();", driver.findElement(checkedCheckbox1));
+		Assert.assertTrue(driver.findElement(checkedCheckbox1).isSelected());
 		
 		By beforeRadio = By.xpath("//span[text()='Before']/preceding-sibling::span/input");
 		jsExecutor.executeScript("arguments[0].click();" , driver.findElement(beforeRadio));
