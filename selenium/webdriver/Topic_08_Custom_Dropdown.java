@@ -174,9 +174,7 @@ public class Topic_08_Custom_Dropdown {
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);\r\n"
 				+ "\r\n"
 				+ "", driver.findElement(By.cssSelector(cssLocator)));
-
-		
-	}
+		}
 	public void selectItemInCustomDropdown(String parentLocator, String childLocator, String textExpectedItem) {
 		driver.findElement(By.cssSelector(parentLocator)).click();
 		
