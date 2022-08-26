@@ -20,7 +20,7 @@ public class Topic_11_Button_Radio_Checkbox {
 
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
 		driver = new FirefoxDriver();
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
