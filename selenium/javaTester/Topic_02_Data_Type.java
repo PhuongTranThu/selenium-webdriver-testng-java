@@ -6,7 +6,9 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Topic_02_Data_Type {
@@ -48,6 +50,8 @@ public class Topic_02_Data_Type {
 		
 		WebDriver driver= new FirefoxDriver();
 		
+		WebDriver driver2;
+		
 		// Đối tượng/ Object
 		Object student;
 		
@@ -55,12 +59,17 @@ public class Topic_02_Data_Type {
 		int number[]= {10, 15, 20};
 		String address[]= { "Đà Năng", "Hà Nội", "Hồ Chí Minh"};
 		
-		// List/ set/ Queue (Collection)- Động
+		// Class 
+		Topic_02_Data_Type topic;
+		
+		
+		// List/ set/ Queue/ Map (Collection)- Động
 		List<Integer> studentNumber = new ArrayList<>();
 		List<String> studentAdress = new ArrayList<String>();
 		Set<String> studentCitySet = new LinkedHashSet<>();
+		List<WebElement> homePageLinks = driver.findElements(By.tagName("a"));
+		Set<String> allWindows = driver.getWindowHandles();
 		
-
 	}
 
 }
