@@ -15,8 +15,7 @@ public class Topic_02_Debug {
 		System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
 		driver = new ChromeDriver();
 		driver.get("https://www.facebook.com/");
-		String headerText = driver
-				.findElement(By.xpath("" + "//img[@alt='Facebook']/parent::div/following-sibling::h2")).getText();
+		String headerText = driver.findElement(By.xpath("" + "//img[@alt='Facebook']/parent::div/following-sibling::h2")).getText();
 		Assert.assertEquals(headerText, "Facebook helps you connect and share with the people in your life.");
 
 		boolean loginStatus = driver.findElement(By.name("login")).isDisplayed();
