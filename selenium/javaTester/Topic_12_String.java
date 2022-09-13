@@ -18,6 +18,8 @@ public class Topic_12_String {
 		System.out.println("Lay ra 1 ky tu = " + schoolName.charAt(0));
 		System.out.println("Nối 2 chuỗi = " + schoolName.concat(schoolAddress));
 		System.out.println("Nối 2 chuỗi = " + schoolName + schoolAddress);
+
+		// Tuyệt đối
 		System.out.println("Kiểm tra 2 chuỗi nối bằng nhau tuyệt đối = " + schoolName.equals(schoolAddress));
 		System.out.println("Kiểm tra 2 chuỗi nối bằng nhau tuyệt đối = " + schoolName.equals("Automation Testing"));
 
@@ -52,6 +54,7 @@ public class Topic_12_String {
 		String productPrice = "$100.00";
 		productPrice = productPrice.replace("$", " ");
 
+		// Sắp xếp nó: Sort Data (Asc/ Desc)
 		float productPriceF = Float.parseFloat(productPrice);
 		System.out.println(productPriceF);
 
