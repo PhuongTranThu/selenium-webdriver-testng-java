@@ -1,21 +1,22 @@
 package javaTester;
 
+import java.util.Scanner;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.beust.jcommander.Parameters;
 
 public class Topic_07_Switch_Case {
 
 	WebDriver driver;
+	Scanner scanner = new Scanner(System.in);
 	String projectPath = System.getProperty("user.dir");
 
 	@Parameters("browser")
 	@Test
-	public void TC_03_If_Else_If_Else(String browserName) {
-
+	public void TC_01_(String browserName) {
 		switch (browserName) {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
@@ -27,12 +28,12 @@ public class Topic_07_Switch_Case {
 		default:
 			new RuntimeException("Please input correct the browser name!");
 			break;
-		}
 
+		}
 	}
 
 	@Test
-	public void TC_04_If_Else_If_Else() {
+	public void TC_02_If_Else_If_Else() {
 		// LoginPage Object
 		// Dynamic Page
 
@@ -57,5 +58,33 @@ public class Topic_07_Switch_Case {
 		String access = (age < 18) ? "You can not access" : "Welcome to our system!";
 
 		System.out.println(access);
+	}
+
+	@Test
+	public void TC_04() {
+
+		int firstNumber = scanner.nextInt();
+		int secondNumber = scanner.nextInt();
+		String operator = scanner.next();
+
+		switch (operator) {
+		case "+":
+			System.out.println("A + B = " + (firstNumber + secondNumber));
+			break;
+
+		case "-":
+			System.out.println("A - B = " + (firstNumber - secondNumber));
+			break;
+
+		case "*":
+			System.out.println("A x B = " + (firstNumber * secondNumber));
+			break;
+
+		case "/":
+			System.out.println("A / B = " + (firstNumber / secondNumber));
+			break;
+		default:
+			break;
+		}
 	}
 }

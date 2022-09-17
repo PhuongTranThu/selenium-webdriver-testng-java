@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommerce">
+
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="javaTester.Topic_07_Switch_Case" />
+		</classes>
+	</test>
+	
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="javaTester.Topic_07_Switch_Case" />
+		</classes>
+	</test>
+
+</suite> 
