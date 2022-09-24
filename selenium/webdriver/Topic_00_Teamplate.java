@@ -12,20 +12,26 @@ public class Topic_00_Teamplate {
 
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
+	String osName = System.getProperty("os.Name");
 
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
+		if (osName.contains("Mac OS")) {//
+			System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
+		} else {
+			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+		}
+
 		driver = new FirefoxDriver();
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		
+
 	}
 
 	@Test
 	public void TC_01() {
-		driver.get("https://www.facebook.com/");	
+		driver.get("https://www.facebook.com/");
 		sleepInSecond(2);
 	}
 
@@ -34,18 +40,18 @@ public class Topic_00_Teamplate {
 		sleepInSecond(3);
 	}
 
-
 	@AfterClass
-	public void afterClass() {		
+	public void afterClass() {
 		driver.quit();
-		}
+	}
+
 	// Sleep cứng (Static wait)
 	public void sleepInSecond(long timeInSecond) {
-	try {
-		Thread.sleep(timeInSecond* 1000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+		try {
+			Thread.sleep(timeInSecond * 1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
