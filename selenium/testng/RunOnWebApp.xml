@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Web Application">
+
+	<test name="Run on FIREFOX">
+		<classes>
+			<class name="facebook.webapp.Login_01" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

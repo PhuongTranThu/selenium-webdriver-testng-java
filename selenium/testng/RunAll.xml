@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Facebook Application">
+
+	<suite-files>
+		<suite-file path="RunOnMobileApp.xml"/>
+		<suite-file path="RunOnWebApp.xml"/>
+	</suite-files>
+
+</suite> <!-- Suite -->

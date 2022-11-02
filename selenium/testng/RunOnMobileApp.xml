@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Mobile Application">
+
+	<test name="Run on FIREFOX">
+		<classes>
+			<class name="facebook.mobile.app.Post_01" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
